@@ -1,3 +1,12 @@
 <h2>App ServerSSSSSSS with SSS</h2>
+<!-- We are trying to change the button property with property binding  -->
+<!-- [] means property binding  -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" >Add a server</button>
+<!-- String interpolation -->
+<p>String interpolation allowNewServer:</p>
+<p>  {{ allowNewServer }} </p>
+<!-- property binding -->
+<p>Property Binding: allowNewSever:</p>
+<p [innerText]="allowNewServer"></p>
 <app-server></app-server>
-<app-server></app-server>
+<p>Check servers.component.html & servers.component.ts</p>
