@@ -9,4 +9,10 @@
 <p>Property Binding: allowNewSever:</p>
 <p [innerText]="allowNewServer"></p>
 <app-server></app-server>
+<!-- Event Binding () -->
+<label>Server Name</label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<button class="btn btn-secondary" (click)="onCreateServer()">Create Server</button>
+<p>{{ serverCreationStatus }}</p>
+<p>Server name: {{ serverName }}</p>
 <p>Check servers.component.html & servers.component.ts</p>
