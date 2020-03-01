@@ -22,4 +22,19 @@
 <p>Server Name ngModel: {{ ngModelServerName }}</p>
 
 
+
+<!-- Combing all forms of data binding -->
+<h2>Combining all forms of data binding</h2>
+<!-- Property Binding -->
+<p [innerText]="allowNewServer"></p>
+<label>New Server name</label>
+<!-- Two-Way Binding -->
+<input type="text" class="form-control" [(ngModel)]="newServerName">
+<!-- Event Binding -->
+<button class='btn btn-primary' (click)="onCreateNewServer()">Create new Server</button>
+<!-- String Interpolation -->
+<p>{{serverCreationStatus}}</p>
+
+
+
 <p>Check servers.component.html & servers.component.ts</p>

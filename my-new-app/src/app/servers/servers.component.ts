@@ -15,6 +15,8 @@ export class ServersComponent implements OnInit {
   // set a variable that will hold the server name
   serverName: string = '';
   ngModelServerName: string ='test server'
+  // Combing all forms of data binding variable
+  newServerName: string = '';
 
   constructor() {
     setTimeout(()=> {
@@ -33,6 +35,9 @@ export class ServersComponent implements OnInit {
     console.log('%c event:', 'color: Orange; font-weight: bold;', `${event.target.value}`);
     // we use (<HTMLInputElement>event.target).value because that's how typescript deals with event.target that comes from the dom
     this.serverName = (<HTMLInputElement>event.target).value;
+  }
+  onCreateNewServer() {
+    this.serverCreationStatus = `Server was created! Name is ${this.newServerName}`;
   }
 
 }
