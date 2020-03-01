@@ -15,4 +15,11 @@
 <button class="btn btn-secondary" (click)="onCreateServer()">Create Server</button>
 <p>{{ serverCreationStatus }}</p>
 <p>Server name: {{ serverName }}</p>
+<h2>Two-Way Binding</h2>
+<!-- Two-Way Binding () with ngModel-->
+<label>Server Name ngModel</label>
+<input type="text" class="form-control" [(ngModel)]="ngModelServerName">
+<p>Server Name ngModel: {{ ngModelServerName }}</p>
+
+
 <p>Check servers.component.html & servers.component.ts</p>

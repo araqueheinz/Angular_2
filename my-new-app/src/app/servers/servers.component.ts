@@ -14,6 +14,7 @@ export class ServersComponent implements OnInit {
   serverCreationStatus: string = 'No server was created';
   // set a variable that will hold the server name
   serverName: string = '';
+  ngModelServerName: string ='test server'
 
   constructor() {
     setTimeout(()=> {
