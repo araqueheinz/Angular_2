@@ -18,6 +18,11 @@ export class ServersComponent implements OnInit {
   // Combing all forms of data binding variable
   newServerName: string = '';
 
+  //ng Directive
+  newServerNameForDirectives: string = '';
+  newServerCreatedForDirectives: string = 'ngif directive No server has been created!'
+  serverCreated: boolean = false;
+
   constructor() {
     setTimeout(()=> {
       this.allowNewServer = true;
@@ -39,5 +44,10 @@ export class ServersComponent implements OnInit {
   onCreateNewServer() {
     this.serverCreationStatus = `Server was created! Name is ${this.newServerName}`;
   }
+  onCreateNewServerForDirectives() {
+    this.serverCreated = true;
+    this.newServerCreatedForDirectives = `Server was created! Name is ${this.newServerNameForDirectives}`;
+  }
+
 
 }

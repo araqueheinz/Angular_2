@@ -35,6 +35,16 @@
 <!-- String Interpolation -->
 <p>{{serverCreationStatus}}</p>
 
+<!-- ng directives -->
+<h2>ngIf Directives</h2>
+<input type="text" class="form-control"[(ngModel)]="newServerNameForDirectives">
+<p>{{newServerNameForDirectives}}</p>
+<button class="btn btn-secondary" (click)="onCreateNewServerForDirectives()">Create New Server</button>
+<!-- using *ngif & else -->
+<p *ngIf="serverCreated; else noServer">Server Was Created, server name is {{ newServerNameForDirectives }}</p>
+<ng-template  #noServer>
+  <p>  No server was created! </p>
+</ng-template>
 
 
 <p>Check servers.component.html & servers.component.ts</p>
