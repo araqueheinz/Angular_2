@@ -22,6 +22,8 @@ export class ServersComponent implements OnInit {
   newServerNameForDirectives: string = '';
   newServerCreatedForDirectives: string = 'ngif directive No server has been created!'
   serverCreated: boolean = false;
+  // ngFor
+  servers = ['TestServer', 'SuperTestSever 2'];
 
   constructor() {
     setTimeout(()=> {
@@ -46,6 +48,7 @@ export class ServersComponent implements OnInit {
   }
   onCreateNewServerForDirectives() {
     this.serverCreated = true;
+    this.servers = [...this.servers, this.newServerNameForDirectives]
     this.newServerCreatedForDirectives = `Server was created! Name is ${this.newServerNameForDirectives}`;
   }
 
