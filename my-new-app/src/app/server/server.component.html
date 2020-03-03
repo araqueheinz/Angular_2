@@ -1,3 +1,5 @@
-<p>The Serverrrr (NO S) Component</p>
+<h2>The Serverrrr (NO S) Component</h2>
 <!-- String interpolation {{ }} -->
-<p>{{ 'Server' }} {{ serverName }} with Id {{ serverId }}, status: {{ getServerStatus() }}</p>
+<!--  ngStyle binding to a property that also happens to be names ngStyle-->
+<p  [ngStyle]="{ backgroundColor: getColor() }">{{ 'Server' }} {{ serverName }} with Id {{ serverId }}, status: {{ getServerStatus() }}</p>
+<p [ngStyle]="{ backgroundColor: getColor() }">{{ 'Server' }} {{ serverName }} with Id {{ serverId }}, status: {{ getServerStatus() }}</p>

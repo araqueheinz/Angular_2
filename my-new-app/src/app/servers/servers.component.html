@@ -8,7 +8,12 @@
 <!-- property binding -->
 <p>Property Binding: allowNewSever:</p>
 <p [innerText]="allowNewServer"></p>
+
+<!-- server component -->
 <app-server></app-server>
+<!-- end server component -->
+
+
 <!-- Event Binding () -->
 <label>Server Name</label>
 <input type="text" class="form-control" (input)="onUpdateServerName($event)">
